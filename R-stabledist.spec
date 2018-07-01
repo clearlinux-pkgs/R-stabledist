@@ -4,16 +4,14 @@
 #
 Name     : R-stabledist
 Version  : 0.7.1
-Release  : 32
+Release  : 33
 URL      : https://cran.r-project.org/src/contrib/stabledist_0.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/stabledist_0.7-1.tar.gz
 Summary  : Stable Distribution Functions
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-FMStable
-Requires: R-fBasics
 BuildRequires : R-FMStable
-BuildRequires : R-fBasics
 BuildRequires : clr-R-helpers
 
 %description
@@ -28,11 +26,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530452857
+export SOURCE_DATE_EPOCH=1530453899
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1530452857
+export SOURCE_DATE_EPOCH=1530453899
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
