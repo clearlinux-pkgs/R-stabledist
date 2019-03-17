@@ -4,13 +4,12 @@
 #
 Name     : R-stabledist
 Version  : 0.7.1
-Release  : 39
+Release  : 40
 URL      : https://cran.r-project.org/src/contrib/stabledist_0.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/stabledist_0.7-1.tar.gz
 Summary  : Stable Distribution Functions
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-FMStable
 BuildRequires : R-FMStable
 BuildRequires : buildreq-R
 
@@ -26,11 +25,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537767337
+export SOURCE_DATE_EPOCH=1552799066
 
 %install
+export SOURCE_DATE_EPOCH=1552799066
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1537767337
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -65,8 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library stabledist|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  stabledist || :
 
 
 %files
@@ -90,10 +88,11 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/stabledist/help/stabledist.rdx
 /usr/lib64/R/library/stabledist/html/00Index.html
 /usr/lib64/R/library/stabledist/html/R.css
+/usr/lib64/R/library/stabledist/tests/doRUnit.R
+/usr/lib64/R/library/stabledist/tests/dstab-ex.R
+/usr/lib64/R/library/stabledist/tests/pstab-ex.R
+/usr/lib64/R/library/stabledist/tests/tails.R
 /usr/lib64/R/library/stabledist/unitTests/Makefile
-/usr/lib64/R/library/stabledist/unitTests/report.html
-/usr/lib64/R/library/stabledist/unitTests/report.txt
-/usr/lib64/R/library/stabledist/unitTests/reportSummary.txt
 /usr/lib64/R/library/stabledist/unitTests/runTests.R
 /usr/lib64/R/library/stabledist/unitTests/runit.StableDistribution.R
 /usr/lib64/R/library/stabledist/xtraR/Levy.R
