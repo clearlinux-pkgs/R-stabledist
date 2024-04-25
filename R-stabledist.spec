@@ -4,7 +4,7 @@
 #
 Name     : R-stabledist
 Version  : 0.7.1
-Release  : 72
+Release  : 73
 URL      : https://cran.r-project.org/src/contrib/stabledist_0.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/stabledist_0.7-1.tar.gz
 Summary  : Stable Distribution Functions
